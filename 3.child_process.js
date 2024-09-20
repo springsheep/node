@@ -27,12 +27,14 @@ const path = require("path");
 // let b = execSync("ping www.baidu.com");
 // console.log("🚀 ~ a:", a.toString(), b.toString());
 //6.execFile 执行可执行文件
-execFile(
-  path.resolve(__dirname, "./bat.cmd"),
-  {
-    cwd: path.resolve(__dirname, "./dist"),
-  },
-  (err, stdout, stderr) => {
-    console.log("🚀 ~ execFile ~ stdout:", stdout.toString());
-  }
-);
+// execFile(
+//   path.resolve(__dirname, "./gitpush.sh"),
+//   {
+//     // cwd: path.resolve(__dirname, "./"),
+//   },
+//   (err, stdout, stderr) => {
+//     console.log("🚀 ~ execFile ~ stdout:", stdout.toString());
+//   }
+// );
+
+execSync("node gitpush.js");
